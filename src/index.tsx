@@ -1,26 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./styles/tailwind.generated.css";
-import Navbar from "./components/Navbar";
+import { App } from "./app";
+import React, { StrictMode } from "react";
+import { render } from "react-dom";
 
-const App = () => {
-  return (
-    <div className="">
-      {/* Nav */}
-      <Navbar />
-
-      <h1 className="text-blue-300 font-black text-3xl">hi</h1>
-
-      {/* Body */}
-      {/* New Post Modal */}
-      {/* Button */}
-    </div>
-  );
-};
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+render(<StrictMode><App/></StrictMode>, document.getElementById("root"));

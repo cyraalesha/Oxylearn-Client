@@ -1,0 +1,14 @@
+@import "tailwindcss/base";
+@import "tailwindcss/utilities";
+
+* {
+  @apply text-white;
+}
+
+body {
+  margin: 0;
+}
+
+body, #root {
+  @apply w-full h-full flex bg-bg;
+}
