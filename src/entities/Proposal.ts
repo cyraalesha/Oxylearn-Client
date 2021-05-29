@@ -1,4 +1,7 @@
-export type Request = {
+import { Approval } from "./Approval";
+
+export type Proposal = {
+  approvals: Approval[];
   author: string;
   bounty: number;
   category: string;
