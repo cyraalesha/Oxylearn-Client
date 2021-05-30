@@ -1,4 +1,5 @@
 import React from "react";
+import { FiPlus } from "react-icons/fi";
 import { ProposalCard } from "./ProposalCard";
 
 export const HomePage = () => (
@@ -24,6 +25,9 @@ export const HomePage = () => (
           }}
         />
       </div>
+      <button className="rounded-full h-14 w-14 bg-blue grid place-items-center absolute bottom-4 right-4 focus:outline-none focus:ring">
+        <FiPlus className="font-black text-3xl" />
+      </button>
     </div>
   </div>
 );
