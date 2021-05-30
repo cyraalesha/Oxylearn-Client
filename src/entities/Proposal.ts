@@ -1,12 +1,15 @@
 import { Approval } from "./Approval";
+import { Category } from "./Category";
+import { User } from "./User";
 
 export type Proposal = {
+  title: string;
   approvals: Approval[];
   author: string;
   bounty: number;
-  category: string;
-  completedBy: string | null;
-  completedOn: Date | null;
+  category: Category;
+  chosenApprover: User | null;
+  chosenOn: Date | null;
   description: string;
   postedOn: Date;
 };
