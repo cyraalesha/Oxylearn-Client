@@ -3,25 +3,20 @@ import React, { useState } from "react";
 import { User } from "./entities/User";
 import { HeaderBar } from "./components/HeaderBar";
 import { LoginPage } from "./components/LoginPage";
-import { AuthProvider, useAuthContext } from "./contexts/AuthContext";
+import { useAuthContext } from "./contexts/AuthContext";
 
 export const App = () => {
   const { user } = useAuthContext();
+  console.log(user, "this was from hjfhjhf safms");
 
-  return (
-    <AuthProvider>
-      <BrowserRouter>
-        {user ? (
-          <>
-            <HeaderBar />
-            <Switch>
-              <Route path="/"></Route>
-            </Switch>
-          </>
-        ) : (
-          <LoginPage />
-        )}
-      </BrowserRouter>
-    </AuthProvider>
+  return user.id ? (
+    <BrowserRouter>
+      <HeaderBar />
+      <Switch>
+        <Route path="/"></Route>
+      </Switch>
+    </BrowserRouter>
+  ) : (
+    <LoginPage />
   );
 };

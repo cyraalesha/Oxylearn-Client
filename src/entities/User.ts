@@ -1,7 +1,7 @@
 export type User = {
+  id: string;
   avatar: string;
   email?: string;
-  username?: string;
   doneRequests: string[];
   isEducator: boolean;
   name: string;

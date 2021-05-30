@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { auth } from "../util/firebase";
 import { User } from "../entities/User";
+import axios from "axios";
 
 interface AuthContextSchema {
   user: User;
@@ -37,6 +38,21 @@ export const AuthProvider = (props: any) => {
 
     if (authRes.additionalUserInfo?.isNewUser) {
       // make signup request
+
+      (async () => {
+        const res = (
+          await axios.post(`${process.env.REACT_APP_SERVER_URL}/user/create`, {
+            user: {
+              id: authRes.user?.uid,
+              avatar: authRes.user?.photoURL,
+              isEducator: false,
+              name: authRes.user?.displayName,
+              email: authRes.user?.email || "",
+            } as User,
+          })
+        ).data;
+        console.log(res);
+      })();
     }
   };
 
@@ -48,6 +64,16 @@ export const AuthProvider = (props: any) => {
     const unsubscribe = auth().onAuthStateChanged(async (returnedUser) => {
       if (returnedUser) {
         // fetch user from api and set user
+
+        (async () => {
+          const res = (
+            await axios.get(
+              `${process.env.REACT_APP_SERVER_URL}/user/fetch/${returnedUser.uid}`
+            )
+          ).data;
+
+          setUser(res.data);
+        })();
       }
 
       return setUser({} as any);
