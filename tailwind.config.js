@@ -7,7 +7,7 @@ module.exports = {
         secondary: "#181921",
         white: "#ffffff",
         muted: "#afafaf",
-        blue: "#3A70FB",
+        blue: "#4A46FF",
         seperator: "#181921"
       }
     }
