@@ -6,7 +6,8 @@ import { LoginPage } from "./components/LoginPage";
 import { useAuthContext } from "./contexts/AuthContext";
 import { HomePage } from "./components/HomePage";
 import { SignUp } from "./components/SignUp";
-import { ProposalPage } from "./components/ProposalPage";
+import { ProposalPage } from "./components/ProposalCard";
+import { CreateModal } from "./components/CreateModal";
 
 export const App = () => {
   const { user } = useAuthContext();
@@ -17,6 +18,7 @@ export const App = () => {
         <BrowserRouter>
           <HeaderBar />
           <Switch>
+
             <Route path="/p">
               <ProposalPage />
             </Route>
