@@ -6334,6 +6334,7 @@ fsevents@~2.3.1:
     postcss: latest
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-hook-form: ^7.7.1
     react-icons: ^4.2.0
     react-router: ^5.2.0
     react-router-dom: ^5.2.0
@@ -7415,6 +7416,15 @@ fsevents@~2.3.1:
   peerDependencies:
     react: 17.0.2
   checksum: 1c1eaa3bca7c7228d24b70932e3d7c99e70d1d04e13bb0843bbf321582bc25d7961d6b8a6978a58a598af2af496d1cedcfb1bf65f6b0960a0a8161cb8dab743c
+  languageName: node
+  linkType: hard
+
+"react-hook-form@npm:^7.7.1":
+  version: 7.7.1
+  resolution: "react-hook-form@npm:7.7.1"
+  peerDependencies:
+    react: ^16.8.0 || ^17
+  checksum: 6d590b8e9bddb72e568250be5a6e86844149fd5800cae548207e9e206cc31dd531e5298991b0d1da34b9428bade9e5c1af71dbcf9dddbfe3eb3d7a89662ebf01
   languageName: node
   linkType: hard
 

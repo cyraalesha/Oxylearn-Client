@@ -5,6 +5,8 @@ import { HeaderBar } from "./components/HeaderBar";
 import { LoginPage } from "./components/LoginPage";
 import { useAuthContext } from "./contexts/AuthContext";
 import { HomePage } from "./components/HomePage";
+import { SignUp } from "./components/SignUp";
+import { ProposalPage } from "./components/ProposalPage";
 
 export const App = () => {
   const { user } = useAuthContext();
@@ -15,9 +17,16 @@ export const App = () => {
         <BrowserRouter>
           <HeaderBar />
           <Switch>
+            <Route path="/p">
+              <ProposalPage />
+            </Route>
+
             <Route path="/">
               <HomePage />
             </Route>
+
+            
+            
           </Switch>
         </BrowserRouter>
       ) : (
