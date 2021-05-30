@@ -2,48 +2,35 @@
   "name": "oxylearn-client",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
+  "scripts": {
+    "start": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "devDependencies": {
+    "@parcel/transformer-image": "2.0.0-beta.3.1",
+    "@parcel/transformer-svg-react": "^2.0.0-nightly.1739",
+    "@parcel/transformer-svgo": "^2.0.0-nightly.1739",
     "@types/react": "^17.0.8",
     "@types/react-dom": "^17.0.5",
+<<<<<<< HEAD
     "autoprefixer": "^10.2.6",
     "firebase": "^8.6.3",
     "postcss": "^8.3.0",
     "postcss-cli": "^8.3.1",
+=======
+    "@types/react-router": "^5.1.14",
+    "@types/react-router-dom": "^5.1.7",
+    "autoprefixer": "latest",
+    "parcel": "next",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "3.8"
+  },
+  "dependencies": {
+>>>>>>> 5408665002074a30faccdb479a0daa8cb45ba117
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "tailwindcss": "^2.1.2",
-    "typescript": "^4.3.2",
-    "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "css": "postcss ./src/styles/tailwind.css -o ./src/styles/tailwind.generated.css",
-    "prestart": "yarn run css",
-    "prebuild": "yarn run css",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
   }
 }

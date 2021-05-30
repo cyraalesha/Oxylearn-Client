@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -20,3 +21,15 @@ yarn-debug.log*
 yarn-error.log*
 
 tailwind.generated.css
+=======
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+node_modules
+.parcel-cache
+dist
+.idea
+>>>>>>> 5408665002074a30faccdb479a0daa8cb45ba117

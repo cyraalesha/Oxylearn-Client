@@ -1,26 +1,21 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "sourceMap": true,
+    "target": "es6",
+    "jsx": "react",
     "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "noEmitOnError": false,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": [
-    "src"
-  ]
+    "importHelpers": true,
+    "strict": true,
+    "lib": ["ESNext", "DOM"],
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "preserveSymlinks": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "downlevelIteration": true,
+  }
 }
