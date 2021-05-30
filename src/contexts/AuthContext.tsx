@@ -1,14 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
 import { auth } from "../util/firebase";
+import { User } from "../entities/User";
 
 interface AuthContextSchema {
-  user: any;
+  user: User;
   login: any;
   logout: any;
 }
 
 const AuthContext = React.createContext<AuthContextSchema>({
-  user: null,
+  user: null as any,
   login: null,
   logout: null,
 });
@@ -16,7 +17,7 @@ const AuthContext = React.createContext<AuthContextSchema>({
 export const useAuthContext = () => useContext(AuthContext);
 
 export const AuthProvider = (props: any) => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState<User>({} as any);
 
   const login = async (providerName: any) => {
     let provider;
@@ -49,7 +50,7 @@ export const AuthProvider = (props: any) => {
         // fetch user from api and set user
       }
 
-      return setUser({});
+      return setUser({} as any);
     });
     return unsubscribe;
   }, []);
