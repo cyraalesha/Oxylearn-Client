@@ -4,7 +4,7 @@ import { useAuthContext } from "../contexts/AuthContext";
 export const LoginPage = () => {
   return (
     <div className="w-screen h-screen grid place-items-center">
-      <div className="w-96 secondaryBg p-6 rounded-lg">
+      <div className="w-96 bg-secondary p-6 rounded-lg">
         <h1 className="text-xl font-bold">Login To Oxylearn</h1>
         <div className="mt-6 flex flex-col gap-3">
           <SocialProvider provider="github" />
