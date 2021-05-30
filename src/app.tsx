@@ -9,16 +9,20 @@ import { HomePage } from "./components/HomePage";
 export const App = () => {
   const { user } = useAuthContext();
 
-  return user.id ? (
-    <BrowserRouter>
-      <HeaderBar />
-      <Switch>
-        <Route path="/">
-          <HomePage />
-        </Route>
-      </Switch>
-    </BrowserRouter>
-  ) : (
-    <LoginPage />
+  return (
+    <div className="w-full h-full">
+      {user.id ? (
+        <BrowserRouter>
+          <HeaderBar />
+          <Switch>
+            <Route path="/">
+              <HomePage />
+            </Route>
+          </Switch>
+        </BrowserRouter>
+      ) : (
+        <LoginPage />
+      )}
+    </div>
   );
 };
