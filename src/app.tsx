@@ -11,7 +11,7 @@ export const App = () => {
 
   return (
     <div className="w-full h-full">
-      {user.id ? (
+      {user?.id ? (
         <BrowserRouter>
           <HeaderBar />
           <Switch>
