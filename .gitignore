@@ -1,35 +1,11 @@
-<<<<<<< HEAD
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
-.env
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-tailwind.generated.css
-=======
 .yarn/*
 !.yarn/releases
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
+.env
 
 node_modules
 .parcel-cache
 dist
 .idea
->>>>>>> 5408665002074a30faccdb479a0daa8cb45ba117
