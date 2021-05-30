@@ -6,7 +6,9 @@ export const ProposalCard = ({ proposal }: { proposal: Proposal }) => (
     <span className="text-xl mb-1 font-bold">{proposal.title}</span>
     <span className="text-sm text-muted">{proposal.category.name}</span>
     <div className="flex justify-between items-center mt-auto">
-      <button className="px-8 py-1 rounded-full bg-blue">Open</button>
+      <button className="px-8 py-2 rounded-full bg-blue text-sm focus:outline-none focus:ring">
+        Open
+      </button>
       {proposal.approvals.length > 0 ? (
         proposal.chosenApprover!.name
       ) : (
