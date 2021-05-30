@@ -1,14 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap");
+
 @import "tailwindcss/base";
 @import "tailwindcss/utilities";
 
 * {
-  @apply text-white;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
 }
 
+html,
 body {
-  margin: 0;
+  background-color: #111215 !important;
+  color: #fff;
 }
 
-body, #root {
-  @apply w-full h-full flex bg-bg;
+.secondaryBg {
+  background: #181921 !important;
 }
